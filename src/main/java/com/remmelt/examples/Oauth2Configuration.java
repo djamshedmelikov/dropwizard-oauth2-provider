@@ -10,6 +10,22 @@ import javax.validation.Valid;
 
 @Getter
 public class Oauth2Configuration extends Configuration {
+	public ImmutableList<String> getAllowedGrantTypes() {
+		return allowedGrantTypes;
+	}
+
+	public void setAllowedGrantTypes(ImmutableList<String> allowedGrantTypes) {
+		this.allowedGrantTypes = allowedGrantTypes;
+	}
+
+	public String getBearerRealm() {
+		return bearerRealm;
+	}
+
+	public void setBearerRealm(String bearerRealm) {
+		this.bearerRealm = bearerRealm;
+	}
+
 	@Valid
 	@JsonProperty
 	private ImmutableList<String> allowedGrantTypes;
